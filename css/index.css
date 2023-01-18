@@ -1,0 +1,265 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+#container{
+    background-color: #333;
+    width: 100%;
+    height: 240%;
+    position: absolute;
+    overflow: hidden;
+    opacity: 1;
+    transition: 0.25s;
+}
+#bg {
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/bg3.jpg");
+    filter: brightness(80%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -100;
+    animation: begin 1s;
+}
+@keyframes begin{
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    transition: .25s;
+}
+
+#nameBox {
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    font-size: 0;
+    transition: .25s;
+}
+
+#nameBox * {
+    display: inline-block;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    transition: .25s;
+}
+
+#navBox {
+    position: absolute;
+    right: 170px;
+    top: 30px;
+    white-space: nowrap;
+    transition: .25s;
+}
+
+.navLink {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+
+    position: relative;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.navLink::before {
+    position: absolute;
+    left: 20px;
+    bottom: 3px;
+    width: calc(100% - 40px);
+    height: 3px;
+    content: '';
+    background: dodgerblue;
+    border-radius: 2px;
+    transition: .25s;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.navLink:hover {
+    background-color: rgba(100, 100, 100, 0.2)
+}
+
+.navLink:hover:before {
+    transform: scale(1);
+    opacity: 1
+}
+
+
+#title {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+#scrollDown {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+}
+
+#scrollIcon {
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 10px);
+    border-right: 3px solid;
+    border-top: 3px solid;
+    border-color: rgba(255, 255, 255, .5);
+    border-radius: 2px;
+    box-sizing: unset;
+    height: 20px;
+    width: 20px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    cursor: pointer;
+    transition: .25s;
+
+}
+
+#about,
+#notes,
+#footer {
+    position: relative;
+    top: 100%;
+    width: 100%;
+    /* height: 100%; */
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+    transition: .25s;
+}
+
+#about {
+    background-color: rgb(30, 30, 30);
+}
+
+.aboutContent {
+    position: relative;
+    margin-top: 35px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+}
+
+#notes {
+    background-color: rgb(40, 40, 40);
+}
+
+#tagBox {
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
+    font-size: small;
+}
+
+#tagBox span {
+    margin: 0 3px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: rgb(53, 53, 53);
+    color: dodgerblue;
+    transition: .25s;
+}
+
+
+#footer {
+    position: relative;
+    top: 100%;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+    transition: .25s;
+
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+#footer a {
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    color: dodgerblue;
+    transition: color 0.5s;
+}
+
+#icon * {
+    transition: .25s;
+}
+
+
+
+.underline {
+    position: absolute;
+    left: calc(50% - 35px);
+    width: 70px;
+    height: 4px;
+    background-color: dodgerblue;
+    border-radius: 2px;
+}
+
+.underline2 {
+    position: absolute;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 4px;
+    background-color: dodgerblue;
+    border-radius: 2px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 76px;
+    color: #fff;
+    margin: 20px 0px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    margin: 40px 0px;
+}
+
+h3 {
+    font-size: 30px;
+    color: #fff;
+    transition: .25s;
+    margin: 20px 0px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+a{
+    text-decoration: none;
+}
